@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* ----------Styling navigation bar---------- */
+header{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+
+nav{
+    flex:2;
+}
+.cart{
+    flex:1;
+    justify-content: flex-end;
+}
+.logo-div, .nav-links, .cart{
+    display: flex;
+}
+.logo-div{
+    flex:1;
+}
+
+.logo-heading{
+    margin: 5px;
+}
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    color: #5f5f79;
+    font-size:20px;
+}
+/* ----------Styling navigation bar Ends Here---------- */
+
+/*-----------Styling The Rest Of The Body---------------*/
+.presentation{
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.introduction{
+    flex: 1;
+}
+
+.cover{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+.cover img{
+    height: 100%;
+    filter: drop-shadow(0px 5px 3px black);
+    animation: drop 1.5s ease;
+}
+.intro-text{
+    flex: 1;
+}
+.intro-text h1{
+    font-size: 30px;
+    font-weight: 500;
+    background:linear-gradient(to right,#494964, #6f6f89);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.intro-text p {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+}
+.cta{
+    padding:50px 0 0 0;
+}
+.cta-select{
+    border: 2px solid #c36cbb;
+    background: transparent;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
+.cta-add{
+    border: none;
+    background: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    margin-left: 30px;
+}
+.big-circle{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: -1;
+    height: 60%;
+}
+.medium-circle{
+    position: absolute;
+    top:30%;
+    right: 30%;
+    z-index: -1;
+    height: 60%;
+}
+.small-circle{
+    position: absolute;
+    bottom:0;
+    left: 20%;
+    z-index: -1;
+}
+.laptop-select{
+    display: flex;
+    justify-content: space-around;
+position: absolute;
+    width: 15%;
+    right: 20%;
+}
+
+/*----------------Keyframes For Animation---------------*/
+@keyframes  drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*-----------Media Queries For Making Responsive-----------*/
+@media only screen and (min-width: 481px) and (max-width: 1223px){
+    .presentation{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .intro-text h1{
+        margin-top: 10vh;
+        text-align: center;
+    }
+    .intro-text p{
+        font-size: 19px;
+    }
+    .cta{
+        padding-left: 6vh;
+    }
+    .cover{
+        margin-left: 5vh;
+        height: 50vh;
+        width: auto;
+    }
+    .cover img{
+        height: 70%;
+    }
+    .laptop-select{
+        right: 40%;
+    }
+    .medium-circle{
+        position: absolute;
+        top:40%;
+        right: 18%;
+        z-index: -1;
+        height: 50%;
+    }
+    .small-circle{
+        position: absolute;
+        bottom:-170px;
+        left: 0%;
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .presentation{
+        flex-direction: column;
+        justify-content: center;
+        align-items: self-start;
+        width:100%;
+    }
+    .cover{
+        margin-left: 13vh;
+        height: 50vh;
+        width: auto;
+    }
+    .cover img{
+        height: 70%;
+        margin-top: 5vh;
+    }
+    .cta{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 8vh;
+    }
+    .big-circle{
+        position: absolute;
+        top:1px;
+        right:-90px;
+        z-index: -1;
+        height: 40%;
+    }
+    .medium-circle{
+        position: absolute;
+        top:30%;
+        right: -20%;
+        z-index: -1;
+        height: 50%;
+    }
+    .small-circle{
+        position: absolute;
+        bottom:-170px;
+        left: -20%;
+        z-index: -1;
+    }
+    .intro-text{
+        text-align: center;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10vh;
+    }
+    .intro-text h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .intro-text p{
+        font-size: 20px;
+    }
+    .cart{
+        position: absolute;
+        right: -89px;
+    }
+    .logo-div{
+        position: relative;
+        left: -10px;
+    }
+    .nav-links{
+        padding: 5px;
+        width: 100%;
+        margin-left: auto;
+    }
+    .laptop-select{
+        right: 35%;
+    }
+}
+
