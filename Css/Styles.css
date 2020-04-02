@@ -252,8 +252,9 @@ position: absolute;
         width: 100%;
         margin-left: auto;
     }
+
     .laptop-select{
-        right: 32%;
+        right: 31%;
     }
 }
 
