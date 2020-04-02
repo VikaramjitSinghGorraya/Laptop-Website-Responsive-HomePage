@@ -195,6 +195,7 @@ position: absolute;
     .cover img{
         height: 70%;
         margin-top: 5vh;
+       margin-left: 5vw;
     }
     .cta{
         flex: 1;
@@ -252,7 +253,16 @@ position: absolute;
         margin-left: auto;
     }
     .laptop-select{
-        right: 35%;
+        right: 32%;
+    }
+}
+
+@media only screen and (max-width: 960px) and (orientation: landscape){
+    .cover{
+        margin-right: 6vw;
+    }
+    .laptop-select {
+        margin: 0 3.8vw;
     }
 }
 
